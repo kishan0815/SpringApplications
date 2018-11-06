@@ -35,7 +35,7 @@ public class VendorDaoImp implements VendorDao{
 	@Override
 	public boolean loginProcess(Vendor v) {
 		String sql = "SELECT * FROM user_info WHERE username = ? AND password = ?";
-		Vendor ven = new Vendor();
+		Vendor ven = null;
 		try {
 			ven = jdbcTemplate.queryForObject(sql, new Object[] {v.getUname(), v.getPassword()}, new RowMapper<Vendor>() {
 																						@Override

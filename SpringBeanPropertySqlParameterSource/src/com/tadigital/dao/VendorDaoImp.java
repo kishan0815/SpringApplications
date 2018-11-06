@@ -33,7 +33,7 @@ public class VendorDaoImp implements VendorDao{
 	@Override
 	public boolean loginProcess(Vendor v) {
 		String sql = "SELECT * FROM user_info WHERE username = :uname AND password = :password";
-		Vendor ven = new Vendor();
+		Vendor ven = null;
 		BeanPropertySqlParameterSource parameters = new BeanPropertySqlParameterSource(v);
 		
 		try {
