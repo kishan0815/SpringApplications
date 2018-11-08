@@ -32,7 +32,7 @@ public class VendorDaoImp implements VendorDao{
 	@Override
 	public boolean loginProcess(Vendor v) {
 		String sql = "SELECT * FROM user_info WHERE username = :user_name AND password = :pwd";
-		Vendor ven = new Vendor();
+		Vendor ven = null;
 		MapSqlParameterSource parameters = new MapSqlParameterSource();
 		parameters.addValue("user_name", v.getUname());
 		parameters.addValue("pwd", v.getPassword());
