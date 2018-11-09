@@ -31,7 +31,6 @@ public class VendorServiceImpl implements VendorService {
 
 	@Override
 	public boolean registerVendor(Vendor v){
-		System.out.println("here");
 		Part part = v.getImgPart();
 		String contentDisp = part.getHeader("content-disposition");
 	    String[] items = contentDisp.split(";");

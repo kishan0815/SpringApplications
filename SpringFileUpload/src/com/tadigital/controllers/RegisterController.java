@@ -30,9 +30,9 @@ public class RegisterController {
 	}
 
 	@PostMapping
-	public String registerTask(@ModelAttribute Vendor vendor, @RequestParam("imgPart") Part imgPart) {
+	public String registerTask(@ModelAttribute Vendor vendor, @RequestParam Part part) {
 		
-		vendor.setImgPart(imgPart);
+		vendor.setImgPart(part);
 		
 		boolean b = vs.registerVendor(vendor);
 		

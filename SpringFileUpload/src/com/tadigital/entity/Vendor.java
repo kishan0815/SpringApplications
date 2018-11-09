@@ -47,6 +47,5 @@ public class Vendor {
 	public void setImgPart(Part imgPart) {
 		this.imgPart = imgPart;
 	}
-
 	
 }
